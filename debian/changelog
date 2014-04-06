@@ -1,3 +1,10 @@
+evolution (3.12.0-1blankon2) tambora; urgency=low
+
+  * BUMP evolution-data-server-dev (3.12),
+  * DROP evolution-data-server-dev (<< 3.11),
+
+ -- Aan Yustian <yustian.aan@gmail.com>  Sun, 06 Apr 2014 18:09:56 +0700
+
 evolution (3.12.0-1blankon1) tambora; urgency=low
 
   * New upstream releases
