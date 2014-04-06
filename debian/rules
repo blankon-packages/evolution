@@ -36,6 +36,7 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 	--disable-contact-maps \
 	--disable-image-inline \
 	--with-clutter \
+        --disable-gtkspell \
 	--with-sub-version=-$(DEB_REVISION)
 
 ifneq ($(DEB_HOST_ARCH_OS), linux)

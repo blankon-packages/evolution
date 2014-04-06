@@ -2,6 +2,7 @@ evolution (3.12.0-1blankon2) tambora; urgency=low
 
   * BUMP evolution-data-server-dev (3.12),
   * DROP evolution-data-server-dev (<< 3.11),
+  * debian/rules add --disable-gtkspell
 
  -- Aan Yustian <yustian.aan@gmail.com>  Sun, 06 Apr 2014 18:09:56 +0700
 
