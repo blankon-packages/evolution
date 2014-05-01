@@ -1,3 +1,35 @@
+evolution (3.12.1-1blankon1) tambora; urgency=medium
+
+  * Merge Whit Sid 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 01 May 2014 06:35:37 +0000
+
+evolution (3.12.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Upload to unstable.
+  * Bump e-d-s Build-Deps to >= 3.12.1.
+  * Re-enable contact maps and add libchamplain-gtk-0.12-dev and
+    libgeoclue-dev to Build-Deps.
+
+ -- Jordi Mallach <jordi@debian.org>  Sat, 26 Apr 2014 13:08:58 +0200
+
+evolution (3.12.0-1) experimental; urgency=medium
+
+  * Team upload.
+
+  * New upstream release.
+  * debian/patches/10_revert_libevolution_avoid-version.patch:
+    + Refreshed.
+  * debian/control:
+    + Update build dependencies.
+    + Update evolution-data-server{,-dev} requirements for the new major
+      version.
+    + Build against gnome-desktop 3.8 in preparation for an upload to
+      unstable.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Fri, 28 Mar 2014 13:28:04 +0100
+
 evolution (3.12.0-1blankon3) tambora; urgency=low
 
   * DROP evolution-data-server (<< 3.11),
