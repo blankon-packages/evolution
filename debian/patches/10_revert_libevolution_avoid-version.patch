@@ -6,178 +6,187 @@ Bug-GNOME: https://bugzilla.gnome.org/show_bug.cgi?id=591436
 Forwarded: no
 
 ---
---- a/addressbook/gui/contact-editor/Makefile.am
-+++ b/addressbook/gui/contact-editor/Makefile.am
-@@ -23,7 +23,7 @@
- 	e-contact-quick-add.c			\
- 	e-contact-quick-add.h
+--- evolution-3.13.5.orig/addressbook/gui/contact-editor/Makefile.am
++++ evolution-3.13.5/addressbook/gui/contact-editor/Makefile.am
+@@ -26,7 +26,7 @@
+ 	e-contact-editor-dyntable.h \
+ 	e-contact-editor-dyntable.c
  
--libecontacteditor_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libecontacteditor_la_LDFLAGS =  $(NO_UNDEFINED)
+-libecontacteditor_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libecontacteditor_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  libecontacteditor_la_LIBADD =						\
  	$(top_builddir)/e-util/libevolution-util.la			\
---- a/addressbook/gui/contact-list-editor/Makefile.am
-+++ b/addressbook/gui/contact-list-editor/Makefile.am
-@@ -19,7 +19,7 @@
+--- evolution-3.13.5.orig/addressbook/gui/contact-list-editor/Makefile.am
++++ evolution-3.13.5/addressbook/gui/contact-list-editor/Makefile.am
+@@ -20,7 +20,7 @@
  	e-contact-list-model.c			\
  	e-contact-list-model.h
  
--libecontactlisteditor_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libecontactlisteditor_la_LDFLAGS =  $(NO_UNDEFINED)
+-libecontactlisteditor_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libecontactlisteditor_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  libecontactlisteditor_la_LIBADD =				\
  	$(top_builddir)/addressbook/util/libeabutil.la		\
---- a/addressbook/importers/Makefile.am
-+++ b/addressbook/importers/Makefile.am
-@@ -18,7 +18,7 @@
+--- evolution-3.13.5.orig/addressbook/importers/Makefile.am
++++ evolution-3.13.5/addressbook/importers/Makefile.am
+@@ -19,7 +19,7 @@
  	evolution-csv-importer.c	        \
  	evolution-addressbook-importers.h
  
--libevolution_addressbook_importers_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libevolution_addressbook_importers_la_LDFLAGS =  $(NO_UNDEFINED)
+-libevolution_addressbook_importers_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libevolution_addressbook_importers_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  libevolution_addressbook_importers_la_LIBADD = \
  	$(top_builddir)/e-util/libevolution-util.la 			\
---- a/addressbook/util/Makefile.am
-+++ b/addressbook/util/Makefile.am
-@@ -19,7 +19,7 @@
+--- evolution-3.13.5.orig/addressbook/util/Makefile.am
++++ evolution-3.13.5/addressbook/util/Makefile.am
+@@ -20,7 +20,7 @@
  	eab-book-util.c					\
  	eab-book-util.h
  
--libeabutil_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libeabutil_la_LDFLAGS =  $(NO_UNDEFINED)
+-libeabutil_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libeabutil_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  libeabutil_la_LIBADD =					\
  	$(top_builddir)/e-util/libevolution-util.la	\
---- a/calendar/gui/Makefile.am
-+++ b/calendar/gui/Makefile.am
-@@ -209,7 +209,7 @@
- 	$(GTKHTML_LIBS)							\
- 	$(LIBSOUP_LIBS)
+--- evolution-3.13.5.orig/calendar/gui/Makefile.am
++++ evolution-3.13.5/calendar/gui/Makefile.am
+@@ -210,7 +210,7 @@
+ 	$(LIBSOUP_LIBS)							\
+ 	$(NULL)
  
--libevolution_calendar_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libevolution_calendar_la_LDFLAGS =  $(NO_UNDEFINED)
+-libevolution_calendar_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libevolution_calendar_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  EXTRA_DIST =	 			\
  	$(ui_DATA)			\
---- a/calendar/importers/Makefile.am
-+++ b/calendar/importers/Makefile.am
-@@ -15,7 +15,7 @@
+--- evolution-3.13.5.orig/calendar/importers/Makefile.am
++++ evolution-3.13.5/calendar/importers/Makefile.am
+@@ -16,7 +16,7 @@
  	evolution-calendar-importer.h	     \
  	icalendar-importer.c
  
--libevolution_calendar_importers_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libevolution_calendar_importers_la_LDFLAGS =  $(NO_UNDEFINED)
+-libevolution_calendar_importers_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libevolution_calendar_importers_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  libevolution_calendar_importers_la_LIBADD =			\
  	$(top_builddir)/e-util/libevolution-util.la		\
---- a/composer/Makefile.am
-+++ b/composer/Makefile.am
-@@ -52,7 +52,7 @@
+--- evolution-3.13.5.orig/composer/Makefile.am
++++ evolution-3.13.5/composer/Makefile.am
+@@ -51,7 +51,7 @@
  	e-composer-text-header.c		\
  	e-msg-composer.c
  
--libevolution_mail_composer_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libevolution_mail_composer_la_LDFLAGS = $(NO_UNDEFINED)
+-libevolution_mail_composer_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libevolution_mail_composer_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  libevolution_mail_composer_la_LIBADD =			\
  	$(top_builddir)/e-util/libevolution-util.la	\
---- a/e-util/Makefile.am
-+++ b/e-util/Makefile.am
-@@ -581,7 +581,7 @@
+--- evolution-3.13.5.orig/e-util/Makefile.am
++++ evolution-3.13.5/e-util/Makefile.am
+@@ -639,7 +639,7 @@
  	$(PLATFORM_SOURCES) \
  	$(NULL)
  
--libevolution_util_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libevolution_util_la_LDFLAGS = $(NO_UNDEFINED)
+-libevolution_util_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libevolution_util_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  libevolution_util_la_LIBADD =  \
  	$(top_builddir)/libgnomecanvas/libgnomecanvas.la \
---- a/em-format/Makefile.am
-+++ b/em-format/Makefile.am
-@@ -124,7 +124,7 @@
+--- evolution-3.13.5.orig/em-format/Makefile.am
++++ evolution-3.13.5/em-format/Makefile.am
+@@ -98,7 +98,7 @@
+ 	e-mail-parser-image.c				\
+ 	e-mail-parser-inlinepgp-encrypted.c		\
+ 	e-mail-parser-inlinepgp-signed.c		\
+- 	e-mail-parser-message.c				\
++	e-mail-parser-message.c				\
+ 	e-mail-parser-message-deliverystatus.c		\
+ 	e-mail-parser-message-external.c		\
+ 	e-mail-parser-message-rfc822.c			\
+@@ -125,7 +125,7 @@
  	e-mail-stripsig-filter.c			\
  	$(SMIME_EXTENSIONS)
  
--libevolution_mail_formatter_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libevolution_mail_formatter_la_LDFLAGS = $(NO_UNDEFINED)
+-libevolution_mail_formatter_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libevolution_mail_formatter_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  if ENABLE_SMIME
  SMIME_LIBS =						\
---- a/libemail-engine/Makefile.am
-+++ b/libemail-engine/Makefile.am
-@@ -83,7 +83,7 @@
- 	$(GTKHTML_LIBS) \
+--- evolution-3.13.5.orig/libemail-engine/Makefile.am
++++ evolution-3.13.5/libemail-engine/Makefile.am
+@@ -82,7 +82,7 @@
+ 	$(GNOME_PLATFORM_LIBS) \
  	$(NULL)
  
--libemail_engine_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libemail_engine_la_LDFLAGS =  $(NO_UNDEFINED)
+-libemail_engine_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libemail_engine_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = libemail-engine.pc
---- a/libgnomecanvas/Makefile.am
-+++ b/libgnomecanvas/Makefile.am
-@@ -53,7 +53,7 @@
+--- evolution-3.13.5.orig/libgnomecanvas/Makefile.am
++++ evolution-3.13.5/libgnomecanvas/Makefile.am
+@@ -54,7 +54,7 @@
  	$(GNOME_PLATFORM_LIBS) \
  	$(MATH_LIB)
  
--libgnomecanvas_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libgnomecanvas_la_LDFLAGS =  $(NO_UNDEFINED)
+-libgnomecanvas_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libgnomecanvas_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  BUILT_SOURCES = $(MARSHAL_GENERATED)
  
---- a/mail/Makefile.am
-+++ b/mail/Makefile.am
-@@ -226,7 +226,7 @@
+--- evolution-3.13.5.orig/mail/Makefile.am
++++ evolution-3.13.5/mail/Makefile.am
+@@ -230,7 +230,7 @@
  	$(LIBSOUP_LIBS)					\
  	$(NULL)
  
--libevolution_mail_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libevolution_mail_la_LDFLAGS =  $(NO_UNDEFINED)
+-libevolution_mail_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libevolution_mail_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
- libevolution_mail_la_DEPENDENCIES = em-filter-i18n.h
+ noinst_PROGRAMS = test-mail-autoconfig
  
---- a/mail/importers/Makefile.am
-+++ b/mail/importers/Makefile.am
-@@ -18,7 +18,7 @@
+--- evolution-3.13.5.orig/mail/importers/Makefile.am
++++ evolution-3.13.5/mail/importers/Makefile.am
+@@ -19,7 +19,7 @@
  	pine-importer.c				\
  	evolution-mbox-importer.c
  
--libevolution_mail_importers_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libevolution_mail_importers_la_LDFLAGS =  $(NO_UNDEFINED)
+-libevolution_mail_importers_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libevolution_mail_importers_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  libevolution_mail_importers_la_LIBADD =				\
  	$(top_builddir)/e-util/libevolution-util.la		\
---- a/shell/Makefile.am
-+++ b/shell/Makefile.am
-@@ -85,7 +85,7 @@
+--- evolution-3.13.5.orig/shell/Makefile.am
++++ evolution-3.13.5/shell/Makefile.am
+@@ -86,7 +86,7 @@
  	evo-version.h				\
  	$(NULL)
  
--libevolution_shell_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libevolution_shell_la_LDFLAGS = $(NO_UNDEFINED)
+-libevolution_shell_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libevolution_shell_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  libevolution_shell_la_LIBADD =				\
  	$(top_builddir)/e-util/libevolution-util.la	\
---- a/smime/gui/Makefile.am
-+++ b/smime/gui/Makefile.am
-@@ -42,7 +42,7 @@
- 	$(GTKHTML_LIBS)					\
- 	$(CERT_UI_LIBS)
+--- evolution-3.13.5.orig/smime/gui/Makefile.am
++++ evolution-3.13.5/smime/gui/Makefile.am
+@@ -43,7 +43,7 @@
+ 	$(CERT_UI_LIBS)					\
+ 	$(NULL)
  
--libevolution_smime_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libevolution_smime_la_LDFLAGS =  $(NO_UNDEFINED)
+-libevolution_smime_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libevolution_smime_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  ui_DATA = smime-ui.ui
  
---- a/smime/lib/Makefile.am
-+++ b/smime/lib/Makefile.am
-@@ -34,6 +34,6 @@
- 	$(GTKHTML_LIBS)				\
- 	$(CERT_UI_LIBS)
+--- evolution-3.13.5.orig/smime/lib/Makefile.am
++++ evolution-3.13.5/smime/lib/Makefile.am
+@@ -35,6 +35,6 @@
+ 	$(CERT_UI_LIBS)				\
+ 	$(NULL)
  
--libessmime_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libessmime_la_LDFLAGS =  $(NO_UNDEFINED)
+-libessmime_la_LDFLAGS = -avoid-version $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
++libessmime_la_LDFLAGS = $(NO_UNDEFINED) $(CODE_COVERAGE_LDFLAGS)
  
  -include $(top_srcdir)/git.mk

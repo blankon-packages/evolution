@@ -1,8 +1,39 @@
-evolution (3.12.1-1blankon1) tambora; urgency=medium
+evolution (3.13.90-0blankon1) tambora; urgency=medium
 
-  * Merge Whit Sid 
+  [ Jean Schurger ]
+  * New upstream release.
+  * debian/control:
+    - Bump e-d-s Build-Deps to >= 3.13.5.
+    - Drop libgtkhtml-* Build-Dep.
+    - Add libcryptui-dev Build-Dep.
+    - Bump Standards-Version to 3.9.4 (no further changes).
+  * Refreshed debian/patches/10_revert_libevolution_avoid-version.patch.
 
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 01 May 2014 06:35:37 +0000
+  [ Mahyuddin ]
+  * Drop libgeoclue-dev Build-Deps
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sat, 16 May 2015 12:49:50 +0700
+
+evolution (3.12.5-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Bump build-dependencies according to configure.ac changes:
+    + libcamel1.2-dev (>= 3.12.5)
+    + libebook1.2-dev (>= 3.12.5)
+    + libecal1.2-dev (>= 3.12.5)
+    + libedataserver1.2-dev (>= 3.12.5)
+    + libebackend1.2-dev (>= 3.12.5)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 23 Aug 2014 19:01:39 -0700
+
+evolution (3.12.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump e-d-s Build-Deps to >= 3.12.2.
+  * Force that evo's dep on e-d-s is tighter, as requested by upstream.
+
+ -- Jordi Mallach <jordi@debian.org>  Mon, 12 May 2014 09:28:18 +0200
 
 evolution (3.12.1-1) unstable; urgency=medium
 
@@ -30,67 +61,6 @@ evolution (3.12.0-1) experimental; urgency=medium
 
  -- Emilio Pozuelo Monfort <pochu@debian.org>  Fri, 28 Mar 2014 13:28:04 +0100
 
-evolution (3.12.0-1blankon3) tambora; urgency=low
-
-  * DROP evolution-data-server (<< 3.11),
-
- -- Aan Yustian <aftian@localhost>  Sun, 06 Apr 2014 23:03:12 +0700
-
-evolution (3.12.0-1blankon2) tambora; urgency=low
-
-  * BUMP evolution-data-server-dev (3.12),
-  * DROP evolution-data-server-dev (<< 3.11),
-  * debian/rules add --disable-gtkspell
-
- -- Aan Yustian <yustian.aan@gmail.com>  Sun, 06 Apr 2014 18:09:56 +0700
-
-evolution (3.12.0-1blankon1) tambora; urgency=low
-
-  * New upstream releases
-
- -- Syai Mif <syai.unipdu@gmail.com>  Sat, 29 Mar 2014 12:13:27 +0700
-
-evolution (3.12.0-1) experimental; urgency=medium
-
-  * Team upload.
-
-  * New upstream release.
-  * debian/patches/10_revert_libevolution_avoid-version.patch:
-    + Refreshed.
-  * debian/control:
-    + Update build dependencies.
-    + Update evolution-data-server{,-dev} requirements for the new major
-      version.
-    + Build against gnome-desktop 3.8 in preparation for an upload to
-      unstable.
-
- -- Emilio Pozuelo Monfort <pochu@debian.org>  Fri, 28 Mar 2014 13:28:04 +0100
-
-evolution (3.10.3-0blankon1) suroboyo; urgency=low
-
-  * New upstream release
-
- -- Mahyuddin Ramli <yudi.al@gmail.com>  Mon, 13 Jan 2014 18:04:33 +0700
-
-evolution (3.10.2-0blankon3) suroboyo; urgency=low
-
-  * Merge Whit Debian
-  * Drop Build-depends : evolution-dev
-
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 15 Dec 2013 06:29:07 +0700
-
-evolution (3.10.2-0blankon2) suroboyo; urgency=low
-
-  * Build-depends : evolution-dev 
-
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 25 Nov 2013 21:43:07 +0700
-
-evolution (3.10.2-0blankon1) suroboyo; urgency=low
-
-  * New upstream release
-
- -- Mahyuddin Idram Ahmad <dotovr@di.blankon.in>  Sun, 17 Nov 2013 14:29:30 +0700
-
 evolution (3.10.1-2) experimental; urgency=low
 
   [ Yves-Alexis Perez ]
@@ -101,7 +71,7 @@ evolution (3.10.1-2) experimental; urgency=low
   [ Sjoerd Simons ]
   * Build against G3.10 gnome-desktop
 
- -- Sjoerd Simons <sjoerd@debian.org>  Wed, 06 Nov 2013 21:45:40 +0100
+ -- Sjoerd Simons <sjoerd@debian.org>  Wed, 06 Nov 2013 22:09:14 +0100
 
 evolution (3.10.1-1) experimental; urgency=low
 
@@ -113,25 +83,6 @@ evolution (3.10.1-1) experimental; urgency=low
   * Unlist mark-as-read plugin from install: it's been merged into the core.
 
  -- Jordi Mallach <jordi@debian.org>  Sun, 20 Oct 2013 11:21:23 +0200
-
-evolution (3.10.1-0blankon1) suroboyo; urgency=low
-
-  * New Upstream Release 
-
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 15 Oct 2013 18:17:04 +0700
-
-evolution (3.10.0-0blankon2) suroboyo; urgency=low
-
-  * remove debian/control linux-any
-  * bump debian/control evolution-data-server-dev (>= 3.10)
-
- -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Thu, 03 Oct 2013 20:26:59 +0700
-
-evolution (3.10.0-0blankon1) suroboyo; urgency=low
-
-  * new upstream release
-
- -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Thu, 03 Oct 2013 17:54:22 +0700
 
 evolution (3.8.5-2) unstable; urgency=low
 
