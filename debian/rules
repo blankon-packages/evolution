@@ -35,6 +35,7 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 	--enable-python \
 	--enable-contact-maps \
 	--disable-image-inline \
+	--disable-autoar \
 	--with-clutter \
 	--with-sub-version=-$(DEB_REVISION)
 
