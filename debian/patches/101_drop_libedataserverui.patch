@@ -1,0 +1,93 @@
+diff -Naur evolution-3.13.90.orig/configure evolution-3.13.90/configure
+--- evolution-3.13.90.orig/configure	2015-05-16 13:10:12.894697545 +0700
++++ evolution-3.13.90/configure	2015-05-16 13:14:07.079001566 +0700
+@@ -15764,13 +15764,11 @@
+ 	 libebook-1.2 >= 3.13.90
+ 	 libecal-1.2 >= 3.13.90
+ 	 libedataserver-1.2 >= 3.13.90
+-	 libedataserverui-1.2 >= 3.13.90
+ 	 libebackend-1.2 >= 3.13.90\""; } >&5
+   ($PKG_CONFIG --exists --print-errors "camel-1.2 >= 3.13.90
+ 	 libebook-1.2 >= 3.13.90
+ 	 libecal-1.2 >= 3.13.90
+ 	 libedataserver-1.2 >= 3.13.90
+-	 libedataserverui-1.2 >= 3.13.90
+ 	 libebackend-1.2 >= 3.13.90") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+@@ -15779,7 +15777,6 @@
+ 	 libebook-1.2 >= 3.13.90
+ 	 libecal-1.2 >= 3.13.90
+ 	 libedataserver-1.2 >= 3.13.90
+-	 libedataserverui-1.2 >= 3.13.90
+ 	 libebackend-1.2 >= 3.13.90" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+@@ -15796,13 +15793,11 @@
+ 	 libebook-1.2 >= 3.13.90
+ 	 libecal-1.2 >= 3.13.90
+ 	 libedataserver-1.2 >= 3.13.90
+-	 libedataserverui-1.2 >= 3.13.90
+ 	 libebackend-1.2 >= 3.13.90\""; } >&5
+   ($PKG_CONFIG --exists --print-errors "camel-1.2 >= 3.13.90
+ 	 libebook-1.2 >= 3.13.90
+ 	 libecal-1.2 >= 3.13.90
+ 	 libedataserver-1.2 >= 3.13.90
+-	 libedataserverui-1.2 >= 3.13.90
+ 	 libebackend-1.2 >= 3.13.90") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+@@ -15811,7 +15806,6 @@
+ 	 libebook-1.2 >= 3.13.90
+ 	 libecal-1.2 >= 3.13.90
+ 	 libedataserver-1.2 >= 3.13.90
+-	 libedataserverui-1.2 >= 3.13.90
+ 	 libebackend-1.2 >= 3.13.90" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+@@ -15837,14 +15831,12 @@
+ 	 libebook-1.2 >= 3.13.90
+ 	 libecal-1.2 >= 3.13.90
+ 	 libedataserver-1.2 >= 3.13.90
+-	 libedataserverui-1.2 >= 3.13.90
+ 	 libebackend-1.2 >= 3.13.90" 2>&1`
+         else
+ 	        EVOLUTION_DATA_SERVER_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "camel-1.2 >= 3.13.90
+ 	 libebook-1.2 >= 3.13.90
+ 	 libecal-1.2 >= 3.13.90
+ 	 libedataserver-1.2 >= 3.13.90
+-	 libedataserverui-1.2 >= 3.13.90
+ 	 libebackend-1.2 >= 3.13.90" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+@@ -15854,7 +15846,6 @@
+ 	 libebook-1.2 >= 3.13.90
+ 	 libecal-1.2 >= 3.13.90
+ 	 libedataserver-1.2 >= 3.13.90
+-	 libedataserverui-1.2 >= 3.13.90
+ 	 libebackend-1.2 >= 3.13.90) were not met:
+ 
+ $EVOLUTION_DATA_SERVER_PKG_ERRORS
+diff -Naur evolution-3.13.90.orig/configure.ac evolution-3.13.90/configure.ac
+--- evolution-3.13.90.orig/configure.ac	2015-05-16 13:10:12.894697545 +0700
++++ evolution-3.13.90/configure.ac	2015-05-16 13:14:42.926228535 +0700
+@@ -303,7 +303,6 @@
+ 	 libebook-1.2 >= eds_minimum_version
+ 	 libecal-1.2 >= eds_minimum_version
+ 	 libedataserver-1.2 >= eds_minimum_version
+-	 libedataserverui-1.2 >= eds_minimum_version
+ 	 libebackend-1.2 >= eds_minimum_version])
+ AC_SUBST(EVOLUTION_DATA_SERVER_CFLAGS)
+ AC_SUBST(EVOLUTION_DATA_SERVER_LIBS)
+diff -Naur evolution-3.13.90.orig/evolution-shell-3.0.pc evolution-3.13.90/evolution-shell-3.0.pc
+--- evolution-3.13.90.orig/evolution-shell-3.0.pc	2015-05-16 13:10:12.894697545 +0700
++++ evolution-3.13.90/evolution-shell-3.0.pc	2015-05-16 13:15:11.429612651 +0700
+@@ -18,7 +18,7 @@
+ Name: evolution-shell
+ Description: libraries needed for Evolution shell components
+ Version: 3.13.90
+-Requires: gtk+-3.0 libebackend-1.2 libedataserver-1.2 libedataserverui-1.2 webkitgtk-3.0
++Requires: gtk+-3.0 libebackend-1.2 libedataserver-1.2 webkitgtk-3.0
+ Requires.private: gnome-desktop-3.0
+ Libs: -L${privlibdir} -levolution-shell -levolution-util -Wl,-R${privlibdir}
+ Cflags: -I${privincludedir}
