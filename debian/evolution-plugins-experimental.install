@@ -1,2 +1,2 @@
-usr/lib/evolution/*/plugins/*-external-editor.so
-usr/lib/evolution/*/plugins/*-external-editor.eplug
+usr/lib/evolution/plugins/liborg-gnome-external-editor.so
+usr/lib/evolution/plugins/org-gnome-external-editor.eplug
